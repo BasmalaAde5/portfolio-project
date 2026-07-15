@@ -1,0 +1,304 @@
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: #222931;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 20px auto;
+  max-width: 1200px;
+}
+.nav ul {
+  display: flex;
+  list-style: none;
+  gap: 40px;
+}
+.nav a {
+  position: relative;
+  text-decoration: none;
+  color: rgb(248, 249, 250);
+  transition: color 0.3s ease;
+  cursor: pointer;
+}
+.nav a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  width: 0;
+  height: 2px;
+  background-color: #00adb5;
+  transition: width 0.3s ease;
+}
+.nav a:hover {
+  color: #00adb5;
+}
+.nav a:hover::after {
+  width: 100%;
+}
+hr {
+  opacity: 10%;
+}
+.hero {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 5rem auto;
+  max-width: 1200px;
+}
+.hero img {
+  width: 30%;
+  height: 30%;
+  border-radius: 50%;
+}
+
+.arrow {
+  position: absolute;
+  transform: translateX(-33rem) translateY(1.5rem);
+}
+.arrow img {
+  width: 50%;
+  height: 50%;
+}
+.herosub {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.name {
+  font-size: 30px;
+  color: white;
+}
+span {
+  color: #00adb5;
+}
+.hire-me {
+  background-color: #00adb5;
+  border: none;
+  color: white;
+  border-radius: 24px;
+  text-decoration: none;
+  padding: 15px 40px;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+}
+.aboutMe {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 5rem auto;
+  max-width: 1200px;
+  gap: 20px;
+}
+.aboutMeImg {
+  width: 30%;
+  height: 30%;
+}
+.textContainer {
+  display: flex;
+  flex-direction: column;
+}
+.textTitle {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 30px;
+}
+.aboutName {
+  color: white;
+}
+.aboutTitle {
+  color: #00adb5;
+}
+.aboutMePar {
+  text-align: justify;
+  color: whitesmoke;
+}
+.works li img {
+  width: 200px;
+  height: 200px;
+  object-fit: contain;
+  transition: transform 0.2s;
+  border-radius: 20px;
+}
+.works li :hover {
+  transform: scale(1.6);
+}
+.works {
+  background-image: url("images/assets/svg/background.svg");
+  padding: 10px 10px;
+  margin: 20px 20px;
+  cursor: pointer;
+}
+.worksContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: left;
+  margin: 10px auto;
+  max-width: 1200px;
+}
+.projectTitle {
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  gap: 5px;
+  font-size: 20px;
+}
+.works ul {
+  display: flex;
+  list-style-type: none;
+  align-items: center;
+  justify-content: space-around;
+}
+.works li {
+  border-radius: 16px;
+  background-color: rgba(57, 62, 70, 0.5);
+  backdrop-filter: blur(1px);
+  padding: 1rem 4rem;
+}
+.contactContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  gap: 2rem;
+  margin: 2rem auto;
+  max-width: 1200px;
+}
+.contactTitle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  margin-bottom: 10px;
+  font-size: 30px;
+}
+.contact {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 5rem;
+  gap: 20rem;
+}
+.contact h3,
+.contact a {
+  color: white;
+  text-decoration: none;
+}
+.emailAndphone {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+}
+.socialMedia {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 3rem;
+}
+.socialMedia a {
+  background-color: rgba(57, 62, 70, 0.5);
+  border-radius: 50px;
+  align-items: center;
+  justify-content: center;
+  backdrop-filter: blur(4px);
+  padding: 1rem;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+.socialMedia a:hover {
+  transform: scale(1.08);
+}
+.socialMedia img {
+  width: 24px;
+  height: 24px;
+  transition: filter 0.2s ease;
+}
+.socialMedia .linkedIn:hover img {
+  filter: brightness(0) saturate(100%) invert(31%) sepia(99%) saturate(2007%)
+    hue-rotate(183deg) brightness(96%) contrast(91%);
+}
+.socialMedia .gitHub:hover img {
+  filter: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(0%)
+    hue-rotate(0deg) brightness(100%) contrast(100%);
+}
+footer {
+  color: white;
+  padding: 1rem;
+  text-align: center;
+}
+@media (max-width: 1023px) {
+  .navbar {
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
+  .hero {
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+  }
+  .heroImg {
+    width: 400px;
+  }
+  .name,
+  .title {
+    font-size: 2rem;
+  }
+  .arrow {
+    display: none;
+  }
+  .aboutMe {
+    flex-direction: column-reverse;
+    align-items: center;
+    gap: 2rem;
+  }
+  .textContainer {
+    align-items: center;
+    margin: 0rem 5rem;
+    gap: 1rem;
+  }
+  .aboutName,
+  .aboutTitle {
+    font-size: 2rem;
+  }
+  .light {
+    width: 60px;
+  }
+  .aboutMeImg {
+    width: 400px;
+  }
+  .works {
+    padding: 0;
+  }
+  .worksContainer {
+    padding: 5rem 0rem;
+    gap: 3rem;
+  }
+  .projectTitle {
+    margin-left: 1rem;
+  }
+  .worke ul {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  .contactContainer {
+    margin: 10rem 5rem;
+    gap: 2rem;
+  }
+  .contact {
+    flex-direction: column;
+    gap: 1rem;
+    margin-right: 0;
+  }
+}
